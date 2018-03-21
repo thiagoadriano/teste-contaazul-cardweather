@@ -3,11 +3,18 @@
 
     angular
         .module('weathernow')
-        .controller('HomeController', HomeController);
+        .component('homePage', HomeComponent());
+
+    function HomeComponent() {
+        return {
+            controller: _HomeController,
+            templateUrl: 'pages/home/home.template.html'
+        };
+    }
 
     /* @ngInject */
-    function HomeController() {
+    function _HomeController() {
         var vm = this;
-
     }
+
 })();

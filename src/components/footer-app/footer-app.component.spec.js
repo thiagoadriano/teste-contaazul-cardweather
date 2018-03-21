@@ -1,4 +1,4 @@
-describe('Card Weather: Component', () => {
+describe('Footer App: Component', () => {
     weathernow.initModule();
 
     var component,
@@ -9,9 +9,7 @@ describe('Card Weather: Component', () => {
     }));
 
     it('Make sure the component is working', () => {
-        component = $componentController('card-weather', null, {
-
-        });
+        component = $componentController('footer-app', null, {});
         expect(component).toBeDefined();
     });
 

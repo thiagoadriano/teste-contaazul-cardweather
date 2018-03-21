@@ -10,12 +10,7 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                views: {
-                    'conteudo': {
-                        controller: 'HomeController as vm',
-                        templateUrl: '/pages/home/home.template.html'
-                    }
-                }
+                component: 'homePage'
             });
     }
 }());
