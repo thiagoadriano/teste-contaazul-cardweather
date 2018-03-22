@@ -1,3 +1,7 @@
 <section class="temperature-card">
-  <h3 class="info">{{$ctrl.value}}º</h3>
+  <h3 class="info" ng-class="{
+    '-cool': $ctrl.value < 6,
+    '-medium': $ctrl.value > 5 && $ctrl.value < 26,
+    '-hot': $ctrl.value > 25
+  }">{{$ctrl.value}}º</h3>
 </section>

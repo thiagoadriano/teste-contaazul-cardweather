@@ -15,6 +15,7 @@
     /* @ngInject */
     function _HomeController() {
         var vm = this;
+        vm.citys = [{city: 'Nuuk', country: 'GL'}, {city: 'Urubici', country: 'BR'}, {city: 'Nairob', country: 'KE'}];
     }
 
 })();
