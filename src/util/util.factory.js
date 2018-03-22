@@ -21,7 +21,7 @@
             for (var i = 0, total = timeGroup.length; i < total; i++) {
                 var item = Number(timeGroup[i]);
                 if (item < 10) {
-                  timeGroup[i] = '0' + item.toString();
+                    timeGroup[i] = '0' + item.toString();
                 }
             }
             return timeGroup.join(':') + hoursIndicate;
@@ -50,9 +50,9 @@
 
         function mapMetrics(data) {
             return {
-              humidity: data.main.humidity,
-              pressure: data.main.pressure,
-              temperature: data.main.temp
+                humidity: Math.floor(data.main.humidity),
+                pressure: Math.floor(data.main.pressure),
+                temperature: Math.floor(data.main.temp)
             };
         }
 

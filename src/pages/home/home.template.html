@@ -1,3 +1,10 @@
 <section class="cards">
-    <card-weather city="Urubici" country="BR"></card-weather>
+    <card-weather
+            class="card-item"
+            ng-repeat="local in $ctrl.citys"
+            city="{{local.city}}"
+            country="{{local.country}}"
+            visible-metrics="local.city === $ctrl.selectedCity"
+            ng-click="$ctrl.selectCity(local.city)"
+    ></card-weather>
 </section>

@@ -1,12 +1,12 @@
 <footer class="footer-card">
   <div class="row">
-    <div class="col">
+    <div class="col" ng-show="$ctrl.viewData">
         <p class="title">HUMIDITY</p>
         <p class="data-info">
-          {{$ctrl.humidity}}<small class="small-text">%</samll>
+            {{$ctrl.humidity}}<small class="small-text">%</small>
         </p>
     </div>
-    <div class="col">
+    <div class="col" ng-show="$ctrl.viewData">
         <p class="title">PRESSURE</p>
         <p class="data-info">
           {{$ctrl.pressure}}<small class="small-text">hpa</small>
