@@ -1,11 +1,17 @@
 <footer class="footer-card">
-  <section class="col">
-      <p class="title">HUMIDITY</p>
-      <p class="data-info">{{$ctrl.humidity}}%</p>
-  </section>
-  <section class="col">
-      <p class="title">PRESSURE</p>
-      <p class="data-info">{{$ctrl.pressure}}hpa</p>
-  </section>
+  <div class="row">
+    <div class="col">
+        <p class="title">HUMIDITY</p>
+        <p class="data-info">
+          {{$ctrl.humidity}}<small class="small-text">%</samll>
+        </p>
+    </div>
+    <div class="col">
+        <p class="title">PRESSURE</p>
+        <p class="data-info">
+          {{$ctrl.pressure}}<small class="small-text">hpa</small>
+        </p>
+    </div>
+  </div>
   <p class="last-update">updated at {{$ctrl.lastUpdate}}</p>
 </footer>

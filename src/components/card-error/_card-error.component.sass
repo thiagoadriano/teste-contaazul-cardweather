@@ -1,1 +1,29 @@
 .card-error
+  width: 100%
+  left: 50%
+  position: absolute
+  text-align: center
+  top: 50%
+  transform: translate(-50%, -30%)
+
+  > .text-error
+      color: $hotColor
+      font-size: 16px
+      margin: 0
+
+  > .btn
+      border-radius: 30px
+      border: solid 1px $grayDarken
+      background: #fff
+      color: $grayDarken
+      cursor: pointer
+      font-size: 18px
+      line-height: 18px
+      margin-top: 18px
+      outline: none
+      padding: 7px 20px 11px
+      transition: all .3s linear
+      &:hover
+         background: $grayDarken
+         color: #fff
+         transition: all .3s linear

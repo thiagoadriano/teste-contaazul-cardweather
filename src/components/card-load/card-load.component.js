@@ -8,7 +8,7 @@
     function LoadCard() {
         return {
             bindings: {
-                visible: '&'
+                visible: '<'
             },
             controller: _LoadCardController,
             templateUrl: 'components/card-load/card-load.component.html'

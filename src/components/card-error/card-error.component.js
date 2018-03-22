@@ -8,7 +8,7 @@
     function ErrorCard() {
         return {
             bindings: {
-                clickAction: '&',
+                onRefresh: '&',
                 visible: '<'
             },
             controller: _ErrorCardController,

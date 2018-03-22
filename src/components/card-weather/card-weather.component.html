@@ -1,9 +1,14 @@
 <article class="card-weather">
+
   <header-card title="Nuuk, CL"></header-card>
+
   <section class="card-view-data" ng-if="!$ctrl.showError && !$ctrl.showLoad">
     <temperature-card value="-4"></temperature-card>
     <footer-card humidity="75" last-update="02:48:27 PM" pressure="892" viewData="true"></footer-card>
   </section>
+
   <load-card visible="$ctrl.showLoad"></load-card>
-  <error-card click-action="$ctrl.reload()" visible="$ctrl.showError"></error-card>
+
+  <error-card on-refresh="$ctrl.reload()" visible="$ctrl.showError"></error-card>
+
 </article>
