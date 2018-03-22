@@ -1,106 +1,11 @@
 <?xml version="1.0"?>
-<testsuite name="PhantomJS 2.1.1 (Windows 8.0.0)" package="" timestamp="2018-03-22T20:01:47" id="0" hostname="LENOVO041237" tests="15" errors="1" failures="15" time="0">
+<testsuite name="PhantomJS 2.1.1 (Windows 8.0.0)" package="" timestamp="2018-03-22T22:38:37" id="0" hostname="LENOVO041237" tests="3" errors="0" failures="0" time="0">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
   </properties>
-  <testcase name="Module: weathernow Defined Modules" time="0" classname="Module: weathernow">
-    <failure type="">ReferenceError: Can't find variable: module in src/app/app.module.spec.es5.js (line 6)
-src/app/app.module.spec.es5.js:6:19
-loaded@http://localhost:8081/context.js:162:17
-</failure>
-  </testcase>
-  <testcase name="App: Config Defined" time="0" classname="App: Config">
-    <failure type="">ReferenceError: Can't find variable: module in src/app/app.config.spec.es5.js (line 10)
-src/app/app.config.spec.es5.js:10:19
-</failure>
-    <failure type="">TypeError: undefined is not an object (evaluating '$locationProvider.html5Mode') in src/app/app.config.spec.es5.js (line 19)
-src/app/app.config.spec.es5.js:19:37
-</failure>
-  </testcase>
-  <testcase name="Error Card: Component encountered a declaration exception" time="0" classname="Error Card: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/card-error/card-error.component.spec.es5.js (line 4)
-src/components/card-error/card-error.component.spec.es5.js:4:15
-global code@src/components/card-error/card-error.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Load Card: Component encountered a declaration exception" time="0" classname="Load Card: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/card-load/card-load.component.spec.es5.js (line 4)
-src/components/card-load/card-load.component.spec.es5.js:4:15
-global code@src/components/card-load/card-load.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Card Weather: Component encountered a declaration exception" time="0" classname="Card Weather: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/card-weather/card-weather.component.spec.es5.js (line 4)
-src/components/card-weather/card-weather.component.spec.es5.js:4:15
-global code@src/components/card-weather/card-weather.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Footer App: Component encountered a declaration exception" time="0" classname="Footer App: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/footer-app/footer-app.component.spec.es5.js (line 4)
-src/components/footer-app/footer-app.component.spec.es5.js:4:15
-global code@src/components/footer-app/footer-app.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Header Card: Component encountered a declaration exception" time="0" classname="Header Card: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/footer-card/footer-card.component.spec.es5.js (line 4)
-src/components/footer-card/footer-card.component.spec.es5.js:4:15
-global code@src/components/footer-card/footer-card.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Header App: Component encountered a declaration exception" time="0" classname="Header App: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/header-app/header-app.component.spec.es5.js (line 4)
-src/components/header-app/header-app.component.spec.es5.js:4:15
-global code@src/components/header-app/header-app.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Header Card: Component encountered a declaration exception" time="0" classname="Header Card: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/header-card/header-card.component.spec.es5.js (line 4)
-src/components/header-card/header-card.component.spec.es5.js:4:15
-global code@src/components/header-card/header-card.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Temperature Card: Component encountered a declaration exception" time="0" classname="Temperature Card: Component">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/components/temperature-card/temperature-card.component.spec.es5.js (line 4)
-src/components/temperature-card/temperature-card.component.spec.es5.js:4:15
-global code@src/components/temperature-card/temperature-card.component.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Home: Controller encountered a declaration exception" time="0" classname="Home: Controller">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/pages/home/home.spec.es5.js (line 4)
-src/pages/home/home.spec.es5.js:4:15
-global code@src/pages/home/home.spec.es5.js:3:9
-</failure>
-  </testcase>
-  <testcase name="Service: Http encountered a declaration exception" time="0" classname="Service: Http">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/services/http/http.service.spec.es5.js (line 7)
-src/services/http/http.service.spec.es5.js:7:19
-src/services/http/http.service.spec.es5.js:6:13
-global code@src/services/http/http.service.spec.es5.js:50:3
-</failure>
-  </testcase>
-  <testcase name="Service: StorageService encountered a declaration exception" time="0" classname="Service: StorageService">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/services/storage/storage.service.spec.es5.js (line 9)
-src/services/storage/storage.service.spec.es5.js:9:19
-src/services/storage/storage.service.spec.es5.js:8:13
-global code@src/services/storage/storage.service.spec.es5.js:99:3
-</failure>
-  </testcase>
-  <testcase name="Service: Weather encountered a declaration exception" time="0" classname="Service: Weather">
-    <failure type="">ReferenceError: Can't find variable: weathernow in src/services/weather/weather.service.spec.es5.js (line 7)
-src/services/weather/weather.service.spec.es5.js:7:19
-src/services/weather/weather.service.spec.es5.js:6:13
-global code@src/services/weather/weather.service.spec.es5.js:24:3
-</failure>
-  </testcase>
-  <testcase name="Util Helpers: Factory encountered a declaration exception" time="0" classname="Util Helpers: Factory">
-    <failure type="">ReferenceError: Can't find variable: module in src/app/app.module.spec.es5.js (line 6)
-src/app/app.module.spec.es5.js:6:19
-</failure>
-    <failure type="">ReferenceError: Can't find variable: module in src/util/util.factory.spec.es5.js (line 9)
-src/util/util.factory.spec.es5.js:9:22
-global code@src/util/util.factory.spec.es5.js:3:9
-</failure>
-  </testcase>
+  <testcase name="Module: application Defined Modules" time="0" classname="Module: application"/>
+  <testcase name="App: Config Defined" time="0" classname="App: Config"/>
+  <testcase name="Error Card: Component Make sure the component is working" time="0" classname="Error Card: Component"/>
   <system-out>
     <![CDATA[
 ]]>

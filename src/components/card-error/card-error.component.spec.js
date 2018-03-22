@@ -1,17 +1,19 @@
 describe('Error Card: Component', () => {
-    weathernow.initModule();
+    var $component;
 
-    var component,
-        $componentController;
+    //weathernow.initModule();
 
-    beforeEach(inject((_$rootScope_, _$componentController_) => {
-        $componentController = _$componentController_;
+    beforeEach(module('weathernow'));
+
+    beforeEach(inject((_$componentController_) => {
+        $component = _$componentController_;
     }));
 
     it('Make sure the component is working', () => {
-        component = $componentController('error-card', null, {
-          clickAction: angular.noop
+        var crtl = $component('errorCard', null, {
+            onRefresh: angular.noop,
+            visible: true
         });
-        expect(component).toBeDefined();
+        expect(crtl).toBeDefined();
     });
 });

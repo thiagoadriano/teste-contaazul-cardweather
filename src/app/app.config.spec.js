@@ -2,8 +2,7 @@
     'use strict';
 
     describe('App: Config', () => {
-        var $locationProvider,
-            config;
+        var $locationProvider;
 
         beforeEach(() => {
             module((_$locationProvider_) => {
