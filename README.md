@@ -3,15 +3,15 @@
 
 A aplicação foi desenvolvida com base no **pdf** que está na pasta **docs**, segui os layouts e as regras para funcionamento do projeto.
 
-Eu iniciei o projeto na branch de nome **develop** por estar usando um processo de gitflow para segurança do projeto.
+Eu iniciei o projeto na branch de nome **develop** por estar usando um processo de gitflow que é o que uso normalmente.
 
-> Usei as technologias:
+> Usei as tecnologias:
 >
 > * HTML5
 > * Sass com CSS3
 > * AngularJS 1.6.9 como suporte ao JavaScript
 >   * Usei esta versão por se tornar mais próxima ao que estão usando nos projetos
->   * Nesta versão também consegui mostrar o meu workflow pois não usei um cli que gerasse isso, adicionei os itens manualmente
+>   * Nesta versão também consegui mostrar o meu workflow pois não foi usado um cli que gerasse isso, adicionei os itens manualmente
 > * Karma e Jasmine nos testes
 > * Gulp automatização de tarefas
 
@@ -43,18 +43,22 @@ Dentro do diretório executaremos o próximo comando:
 npm start
 ```
 
-Este comando irá executar alguns processos que seriam a instalação do _gulp-cli_ depois a instalação dos módulos do projeto e por fim executaria o projeto abrindo o navegador e mostrando o projeto rodando.
+Este comando irá executar alguns processos que seriam:
 
-Caso queira rodar os testes pode executar o seguinte comando no terminal:
+* A instalação do _gulp-cli_ depois
+* Instalação dos módulos do projeto 
+* E execução do projeto abrindo no navegador
 
-```
-npm run coverage
-```
-
-Caso o projeto não rode automaticamente no navegador, abra uma nova aba copie e cole a url abaixo:
+Apos o processo de compilar com sucesso e o projeto não rodar automaticamente no navegador, abra uma nova aba copie e cole a url abaixo:
 
 ```
 http://localhost:3000
+```
+
+Caso queira rodar os testes, pode executar em um outro terminal dentro do root do projeto o seguinte comando:
+
+```
+npm run coverage
 ```
 
 Para finalizar o terminal basta executar o comando:
@@ -65,7 +69,7 @@ CTRL + C (2 vezes)
 
 ## Arquivos de fonte do código
 * Na pasta **src** contém os arquivos que contemplam todo o funcionamento, que no caso, é o código fonte do projeto.
-* Na pasta **gulp-tasks** são as terefas que executam para start do projeto e para ficar vigiando as alterações e realizar a preparação dos arquivos
+* Na pasta **gulp-tasks** são as terefas que executam para start do projeto e para ficar vigiando as alterações nos arquivos finais
 * A pasta **covarage** e a pasta **tests** cuidam dos testes automatizados
 * A pasta **.dev** é a pasta que é criada com os arquivos já compilados e concatenados para rodar no navegador
 * Os arquivos que estão na raiz são configuradores e gerenciadores das dependências  
