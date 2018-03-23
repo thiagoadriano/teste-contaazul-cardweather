@@ -1,7 +1,7 @@
 # Teste Conta Azul
 ## Aplicação Cards Weather Now
 
-A aplicação foi desenvolvida com base no pdf que está na pasta docs, segui os layouts e as regras para funcionamento do projeto.
+A aplicação foi desenvolvida com base no **pdf** que está na pasta **docs**, segui os layouts e as regras para funcionamento do projeto.
 
 Eu iniciei o projeto na branch de nome **develop** por estar usando um processo de gitflow para segurança do projeto.
 
@@ -23,13 +23,7 @@ Eu iniciei o projeto na branch de nome **develop** por estar usando um processo 
 1. [Git](https://git-scm.com/)
 1. Gulp-cli
 
-Após instalar NodeJs e o Git, abra o terminal Bash e instale o gulp-cli usando:
-
-```
-npm i -g gulp-cli
-```
-
-Após o término da execução desta tarefa, iremos baixar o projeto para o diretório de sua escolha. 
+Após instalar NodeJs e o Git, abra o terminal Bash que iremos baixar o projeto para o diretório de sua escolha. 
 Após abrir o  diretório execute o comando:
 
 ```
@@ -46,14 +40,10 @@ cd teste-contaazul-cardweather
 Dentro do diretório executaremos o próximo comando:
 
 ```
-npm i
-```
-
-Após o término da instalação, executaremos o comando que irá rodar o projeto passando por todo o processo de lint e copia e preparação dos arquivos adicionando os mesmos a uma nova pasta que será usada no servidor que irá iniciar o projeto no navegador:
-
-```
 npm start
 ```
+
+Este comando irá executar alguns processos que seriam a instalação do _gulp-cli_ depois a instalação dos módulos do projeto e por fim executaria o projeto abrindo o navegador e mostrando o projeto rodando.
 
 Caso queira rodar os testes pode executar o seguinte comando no terminal:
 
@@ -66,5 +56,18 @@ Caso o projeto não rode automaticamente no navegador, abra uma nova aba copie e
 ```
 http://localhost:3000
 ```
+
+Para finalizar o terminal basta executar o comando:
+
+```
+CTRL + C (2 vezes)
+```
+
+## Arquivos de fonte do código
+* Na pasta **src** contém os arquivos que contemplam todo o funcionamento, que no caso, é o código fonte do projeto.
+* Na pasta **gulp-tasks** são as terefas que executam para start do projeto e para ficar vigiando as alterações e realizar a preparação dos arquivos
+* A pasta **covarage** e a pasta **tests** cuidam dos testes automatizados
+* A pasta **.dev** é a pasta que é criada com os arquivos já compilados e concatenados para rodar no navegador
+* Os arquivos que estão na raiz são configuradores e gerenciadores das dependências  
 
 Em caso de qualquer dúvida ou não execução estarei a disposição para resolver o quanto antes para que não quebre a avaliação dos senhores.
