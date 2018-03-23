@@ -57,8 +57,8 @@
         function _getData() {
             vm.showLoad = true;
             WeatherService.getMetrics(cityQuery)
-              .then(_successGetData)
-              .catch(_errorGetData);
+                .then(_successGetData)
+                .catch(_errorGetData);
         }
 
         function _successGetData(data) {

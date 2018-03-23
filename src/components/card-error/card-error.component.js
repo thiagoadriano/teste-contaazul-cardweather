@@ -11,12 +11,7 @@
                 onRefresh: '&',
                 visible: '<'
             },
-            controller: _controller,
             templateUrl: 'components/card-error/card-error.component.html'
         };
-    }
-    
-    function _controller() {
-        var vm = this;
     }
 })();

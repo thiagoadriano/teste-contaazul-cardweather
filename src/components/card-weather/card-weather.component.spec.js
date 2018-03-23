@@ -1,20 +1,53 @@
-// describe('Card Weather: Component', () => {
-//     weathernow.initModule();
-//
-//     var component,
-//         $componentController;
-//
-//     beforeEach(inject((_$rootScope_, _$componentController_) => {
-//         $componentController = _$componentController_;
-//     }));
-//
-//     it('Make sure the component is working', () => {
-//         component = $componentController('card-weather', null, {
-//
-//         });
-//         expect(component).toBeDefined();
-//     });
-//
-//
-//
-// });
+(() => {
+    'use strict';
+    describe('Componente: cardWeather', () => {
+        var $component,
+            storage;
+
+        beforeEach(module('weathernow'));
+
+        beforeEach(inject((_$componentController_, _StorageService_) => {
+            $component = _$componentController_;
+            storage = _StorageService_;
+        }));
+        
+
+        it('Deve garantir o componente sendo instanciado', () => {
+            var ctrl = $component('cardWeather', null, {});
+            expect(ctrl).toBeDefined();
+        });
+
+        it('Deve garantir o funcionamento dos bindings', () => {
+            var ctrl = $component('cardWeather', null, {
+                city: 'são paulo',
+                country: 'br',
+                visibleMetrics: false
+            });
+            expect(ctrl.city).toEqual('são paulo');
+            expect(ctrl.country).toEqual('br');
+            expect(ctrl.visibleMetrics).toBeFalsy();
+        });
+
+        it('Deve garantir a mudança iniciais', () => {
+            var ctrl = $component('cardWeather', null, {
+                city: 'rio de janeiro',
+                country: 'br',
+                visibleMetrics: true
+            });
+            expect(ctrl.showError).toBeFalsy();
+            expect(ctrl.showLoad).toBeFalsy();
+
+            ctrl.reload();
+            expect(ctrl.showError).toBeFalsy();
+            expect(ctrl.showLoad).toBeTruthy();
+
+            expect(ctrl.city).toEqual('rio de janeiro');
+            expect(ctrl.country).toEqual('br');
+            ctrl.$onInit();
+            expect(ctrl.country).toEqual('BR');
+            expect(ctrl.city).toEqual('Rio de Janeiro');
+
+        });
+
+    });
+})();

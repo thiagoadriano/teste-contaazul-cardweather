@@ -1,18 +1,17 @@
-// describe('Footer App: Component', () => {
-//     weathernow.initModule();
-//
-//     var component,
-//         $componentController;
-//
-//     beforeEach(inject((_$rootScope_, _$componentController_) => {
-//         $componentController = _$componentController_;
-//     }));
-//
-//     it('Make sure the component is working', () => {
-//         component = $componentController('footer-app', null, {});
-//         expect(component).toBeDefined();
-//     });
-//
-//
-//
-// });
+(() => {
+    'use strict';
+    describe('Componente: footerApp', () => {
+        var $component;
+
+        beforeEach(module('weathernow'));
+
+        beforeEach(inject((_$componentController_) => {
+            $component = _$componentController_;
+        }));
+
+        it('Deve garantir o componente sendo instanciado', () => {
+            var ctrl = $component('footerApp', null, {});
+            expect(ctrl).toBeDefined();
+        });
+    });
+})();

@@ -1,20 +1,17 @@
-// describe('Header App: Component', () => {
-//     weathernow.initModule();
-//
-//     var component,
-//         $componentController;
-//
-//     beforeEach(inject((_$rootScope_, _$componentController_) => {
-//         $componentController = _$componentController_;
-//     }));
-//
-//     it('Make sure the component is working', () => {
-//         component = $componentController('header-app', null, {
-//
-//         });
-//         expect(component).toBeDefined();
-//     });
-//
-//
-//
-// });
+(() => {
+    'use strict';
+    describe('Componente: headerApp', () => {
+        var $component;
+
+        beforeEach(module('weathernow'));
+
+        beforeEach(inject((_$componentController_) => {
+            $component = _$componentController_;
+        }));
+
+        it('Deve garantir o componente sendo instanciado', () => {
+            var ctrl = $component('headerApp', null, {});
+            expect(ctrl).toBeDefined();
+        });
+    });
+})();

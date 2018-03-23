@@ -1,18 +1,27 @@
-// describe('Header Card: Component', () => {
-//     weathernow.initModule();
-//
-//     var component,
-//         $componentController;
-//
-//     beforeEach(inject((_$rootScope_, _$componentController_) => {
-//         $componentController = _$componentController_;
-//     }));
-//
-//     it('Make sure the component is working', () => {
-//         component = $componentController('header-card', null, {
-//             title: 'Teste'
-//         });
-//         expect(component).toBeDefined();
-//         expect(component.title).toEqual('Teste');
-//     });
-// });
+(() => {
+    'use strict';
+    describe('Componente: headerCard', () => {
+        var $component;
+
+        beforeEach(module('weathernow'));
+
+        beforeEach(inject((_$componentController_) => {
+            $component = _$componentController_;
+        }));
+
+        it('Deve garantir o componente sendo instanciado', () => {
+            var ctrl = $component('headerCard', null, {});
+            expect(ctrl).toBeDefined();
+        });
+
+        it('Deve garantir o funcionamento do binding', () => {
+            var ctrl = $component('loadCard', null, {
+                title: 'Teste'
+            });
+            expect(ctrl.title).toEqual('Teste');
+
+            ctrl.title = 'Outra Coisa';
+            expect(ctrl.title).toEqual('Outra Coisa');
+        });
+    });
+})();

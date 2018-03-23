@@ -1,22 +1,22 @@
-// (() => {
-//     'use strict';
-//
-//     describe('Service: Weather', () => {
-//         weathernow.initModule();
-//         var WeatherService;
-//
-//         beforeEach(inject(($injector) => {
-//             WeatherService = $injector.get('WeatherService');
-//             spyOn(WeatherService, 'getMetric').and.callThrough();
-//         }));
-//
-//         it('WeatherService should be defined', () => {
-//             expect(WeatherService).toBeDefined();
-//         });
-//
-//         it('CreateCart method should be working', () => {
-//             WeatherService.getMetric('London');
-//             expect(WeatherService.getMetric).toHaveBeenCalled();
-//         });
-//     });
-// })();
+(() => {
+    'use strict';
+    describe('Service: Weather', () => {
+        var WeatherService;
+
+        beforeEach(module('weathernow'));
+
+        beforeEach(inject((_$injector_) => {
+            WeatherService = _$injector_.get('WeatherService');
+            spyOn(WeatherService, 'getMetrics').and.callThrough();
+        }));
+
+        it('Deve garantir o service foi instanciado', () => {
+            expect(WeatherService).toBeDefined();
+        });
+
+        it('Deve garantir que o get aos dados está sendo executado', () => {
+            WeatherService.getMetrics('London');
+            expect(WeatherService.getMetrics).toHaveBeenCalled();
+        });
+    });
+})();

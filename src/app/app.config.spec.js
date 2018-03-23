@@ -1,7 +1,6 @@
 (() => {
     'use strict';
-
-    describe('App: Config', () => {
+    describe('App: Configurações', () => {
         var $locationProvider;
 
         beforeEach(() => {
@@ -13,7 +12,7 @@
             inject();
         });
 
-        it('Defined', () => {
+        it('Deve garantir que config foi definido', () => {
             expect($locationProvider.html5Mode()).toBeTruthy();
         });
     });

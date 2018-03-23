@@ -1,18 +1,32 @@
-// describe('Header Card: Component', () => {
-//     weathernow.initModule();
-//
-//     var component,
-//         $componentController;
-//
-//     beforeEach(inject((_$rootScope_, _$componentController_) => {
-//         $componentController = _$componentController_;
-//     }));
-//
-//     it('Make sure the component is working', () => {
-//         component = $componentController('header-card', null, {
-//             title: 'Teste'
-//         });
-//         expect(component).toBeDefined();
-//         expect(component.title).toEqual('Teste');
-//     });
-// });
+(() => {
+    'use strict';
+    describe('Componente: footerCard', () => {
+        var $component;
+
+        beforeEach(module('weathernow'));
+
+        beforeEach(inject((_$componentController_) => {
+            $component = _$componentController_;
+        }));
+
+        it('Deve garantir o componente sendo instanciado', () => {
+            var ctrl = $component('footerCard', null, {});
+            expect(ctrl).toBeDefined();
+        });
+
+        it('Deve garantir o funcionamento dos bindings', () => {
+            var ctrl = $component('footerCard', null, {
+                humidity: 80,
+                lastUpdate: '03:20:57 AM',
+                pressure: 850,
+                viewData: true
+            });
+            expect(ctrl.viewData).toBeTruthy();
+            expect(ctrl.humidity).toEqual(80);
+            expect(ctrl.pressure).toBeGreaterThanOrEqual(850);
+            expect(ctrl.lastUpdate).toEqual('03:20:57 AM');
+        }); 
+        
+    });
+})();
+

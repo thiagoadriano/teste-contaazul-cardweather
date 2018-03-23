@@ -1,11 +1,48 @@
 <?xml version="1.0"?>
-<testsuite name="PhantomJS 2.1.1 (Windows 8.0.0)" package="" timestamp="2018-03-22T22:38:37" id="0" hostname="LENOVO041237" tests="3" errors="0" failures="0" time="0">
+<testsuite name="PhantomJS 2.1.1 (Windows 8.0.0)" package="" timestamp="2018-03-23T05:40:13" id="0" hostname="DESKTOP-UEUQL53" tests="40" errors="0" failures="0" time="0">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
   </properties>
-  <testcase name="Module: application Defined Modules" time="0" classname="Module: application"/>
-  <testcase name="App: Config Defined" time="0" classname="App: Config"/>
-  <testcase name="Error Card: Component Make sure the component is working" time="0" classname="Error Card: Component"/>
+  <testcase name="Module: weathernow Deve garantir que os módulos foram definidos" time="0" classname="Module: weathernow"/>
+  <testcase name="App: Configurações Deve garantir que config foi definido" time="0" classname="App: Configurações"/>
+  <testcase name="Componente: errorCard Deve garantir o componente sendo instanciado" time="0" classname="Componente: errorCard"/>
+  <testcase name="Componente: errorCard Deve garantir o funcionamento dos bindings" time="0" classname="Componente: errorCard"/>
+  <testcase name="Componente: errorCard Deve garantir que o binding de função foi chamado" time="0" classname="Componente: errorCard"/>
+  <testcase name="Componente: loadCard Deve garantir o componente sendo instanciado" time="0" classname="Componente: loadCard"/>
+  <testcase name="Componente: loadCard Deve garantir o funcionamento do binding" time="0" classname="Componente: loadCard"/>
+  <testcase name="Componente: cardWeather Deve garantir o componente sendo instanciado" time="0" classname="Componente: cardWeather"/>
+  <testcase name="Componente: cardWeather Deve garantir o funcionamento dos bindings" time="0" classname="Componente: cardWeather"/>
+  <testcase name="Componente: cardWeather Deve garantir a mudança iniciais" time="0" classname="Componente: cardWeather"/>
+  <testcase name="Componente: footerApp Deve garantir o componente sendo instanciado" time="0" classname="Componente: footerApp"/>
+  <testcase name="Componente: footerCard Deve garantir o componente sendo instanciado" time="0" classname="Componente: footerCard"/>
+  <testcase name="Componente: footerCard Deve garantir o funcionamento dos bindings" time="0" classname="Componente: footerCard"/>
+  <testcase name="Componente: headerApp Deve garantir o componente sendo instanciado" time="0" classname="Componente: headerApp"/>
+  <testcase name="Componente: headerCard Deve garantir o componente sendo instanciado" time="0" classname="Componente: headerCard"/>
+  <testcase name="Componente: headerCard Deve garantir o funcionamento do binding" time="0" classname="Componente: headerCard"/>
+  <testcase name="Componente: temperatureCard Deve garantir o componente sendo instanciado" time="0" classname="Componente: temperatureCard"/>
+  <testcase name="Componente: temperatureCard Deve garantir o funcionamento do binding" time="0" classname="Componente: temperatureCard"/>
+  <testcase name="Home: Controller Deve garantir o componente sendo instanciado" time="0" classname="Home: Controller"/>
+  <testcase name="Home: Controller Deve garantir a troca de card" time="0" classname="Home: Controller"/>
+  <testcase name="Home: Controller Deve garantir a chamada inicial do compoente" time="0" classname="Home: Controller"/>
+  <testcase name="Service: Http Deve garantir o service foi instanciado" time="0" classname="Service: Http"/>
+  <testcase name="Service: Http Deve garantir que o método get foi chamado" time="0" classname="Service: Http"/>
+  <testcase name="Service: Http Deve garantir que o método post foi chamado" time="0" classname="Service: Http"/>
+  <testcase name="Service: Http Deve garantir que o método put foi chamado" time="0" classname="Service: Http"/>
+  <testcase name="Service: StorageService Deve garantir o factory foi instanciado" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve verificar se os valores retornados estão como definidos" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve garantir que os valores retornados estão no tipo correto" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve verificar o uso de outras apis" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve verificar se o parâmetro especificado na função del não é uma string" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve verificar se o parâmetro fornecido na função set não é uma string" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve verificar se o parâmetro fornecido na função get não é uma string" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: StorageService Deve verificar a recursão se ela funciona conforme o esperado" time="0" classname="Service: StorageService"/>
+  <testcase name="Service: Weather Deve garantir o service foi instanciado" time="0" classname="Service: Weather"/>
+  <testcase name="Service: Weather Deve garantir que o get aos dados está sendo executado" time="0" classname="Service: Weather"/>
+  <testcase name="Util: Factory Deve garantir que está instanciado" time="0" classname="Util: Factory"/>
+  <testcase name="Util: Factory Deve garantir que está capitularizando o texto " time="0" classname="Util: Factory"/>
+  <testcase name="Util: Factory Deve garantir que está devolvendo as metricas corretas" time="0" classname="Util: Factory"/>
+  <testcase name="Util: Factory Deve garantir que está retornando corretamente a próxima atualização" time="0" classname="Util: Factory"/>
+  <testcase name="Util: Factory Deve garantir que o formato correto do retorno do tempo" time="0" classname="Util: Factory"/>
   <system-out>
     <![CDATA[
 ]]>
