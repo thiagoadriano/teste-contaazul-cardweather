@@ -1,7 +1,7 @@
 # Teste Conta Azul
 ## Aplicação Cards Weather Now
 
-A aplicação foi desenvolvida com base no **pdf** que está na pasta **docs**, segui os layouts e as regras para funcionamento do projeto.
+A aplicação foi desenvolvida com base no **pdf** que está na pasta **docs**, segui os layouts e as regras para funcionamento do projeto. **Para ver online Acesse [http://thiagoadriano.com.br/projetos/weathernow-contaazul/](http://thiagoadriano.com.br/projetos/weathernow-contaazul/)**
 
 Eu iniciei o projeto na branch de nome **develop** por estar usando um processo de gitflow que é o que uso normalmente.
 
@@ -49,6 +49,18 @@ Este comando irá executar alguns processos que seriam:
 * Instalação dos módulos do projeto 
 * E execução do projeto abrindo no navegador
 
+
+
+> ### Observeção em caso de erro:
+> Pode ser necessário a instalação do gulp-sass onde o mesmo depende da instalação do python, para isto:
+>  * instale o Python 2.7. [Baixe clicando aqui](https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi)
+>  * Após instalção, execute o comando
+```
+npm i gulp-sass
+```
+
+
+
 Apos o processo de compilar com sucesso e o projeto não rodar automaticamente no navegador, abra uma nova aba copie e cole a url abaixo:
 
 ```
@@ -71,6 +83,7 @@ CTRL + C (2 vezes)
 * Na pasta **src** contém os arquivos que contemplam todo o funcionamento, que no caso, é o código fonte do projeto.
 * Na pasta **gulp-tasks** são as terefas que executam para start do projeto e para ficar vigiando as alterações nos arquivos finais
 * A pasta **covarage** e a pasta **tests** cuidam dos testes automatizados
+* Na pasta **test/covarage** pode abrir o arquivo **index.html** para visualizar o status dos testes
 * A pasta **.dev** é a pasta que é criada com os arquivos já compilados e concatenados para rodar no navegador
 * Os arquivos que estão na raiz são configuradores e gerenciadores das dependências  
 
