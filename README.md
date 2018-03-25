@@ -21,7 +21,7 @@ Eu iniciei o projeto na branch de nome **develop** por estar usando um processo 
 #### É necessário ter instalado
 1. [NodeJS](https://nodejs.org/en/)
 1. [Git](https://git-scm.com/)
-1. Gulp-cli
+1. [Gulp-cli](https://gulpjs.com/)
 
 Após instalar NodeJs e o Git, abra o terminal Bash que iremos baixar o projeto para o diretório de sua escolha. 
 Após abrir o  diretório execute o comando:
