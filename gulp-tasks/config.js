@@ -28,17 +28,7 @@ module.exports = {
             `${paths.src}/**/*.js`,
             `!${paths.src}/**/*.spec.js`
         ],
-        scriptsVendors: [
-            './node_modules/angular/angular.js',
-            './node_modules/angular-animate/angular-animate.js',
-            './node_modules/angular-cookies/angular-cookies.js',
-            './node_modules/angular-sanitize/angular-sanitize.js',
-            './node_modules/angular-touch/angular-touch.js',
-            './node_modules/angular-aria/angular-aria.js',
-            './node_modules/angular-messages/angular-messages.js',
-            './node_modules/@uirouter/core/_bundles/ui-router-core.js',
-            './node_modules/@uirouter/angularjs/release/ui-router-angularjs.js'
-        ]
+        scriptsVendors: require('../vendors_js.json')
     },
     base: __dirname.replace(require('path').basename(__dirname), ''),
     buildHash: cacheBust,

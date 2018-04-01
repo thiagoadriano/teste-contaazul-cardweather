@@ -95,5 +95,25 @@
         });
 
 
+        it('Deve garantir a troca de tipo', () => {
+            var item = {name: 'teste', value: 'Teste de Tipo Storage', prefix: 'WNCA_'};
+
+            expect(localStorage.getItem(`${item.prefix}${item.name}`)).toBeNull();
+            expect(sessionStorage.getItem(item.name)).toBeNull();
+
+            StorageService.set(item.name, item.value);
+            expect(localStorage.getItem(`${item.prefix}${item.name}`)).toEqual(item.value);         
+            expect(sessionStorage.getItem(item.name)).toBeNull();
+            
+            StorageService.setType('session');
+            StorageService.set(item.name, item.value);
+            expect(localStorage.getItem(`${item.prefix}${item.name}`)).toEqual(item.value);         
+            expect(sessionStorage.getItem(`${item.prefix}${item.name}`)).toEqual(item.value);    
+
+            StorageService.setType('local');
+            expect(StorageService.get(item.name)).toEqual(item.value);  
+        });
+
+
     });
 })();

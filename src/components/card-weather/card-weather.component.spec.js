@@ -17,6 +17,7 @@
             expect(ctrl).toBeDefined();
         });
 
+
         it('Deve garantir o funcionamento dos bindings', () => {
             var ctrl = $component('cardWeather', null, {
                 city: 'são paulo',
@@ -48,6 +49,21 @@
             expect(ctrl.city).toEqual('Rio de Janeiro');
 
         });
+
+        it('Deve garantir o funcionamento com métricas adicionadas', () => {
+            var ctrl = $component('cardWeather', null, {
+                city: 'Urubici',
+                country: 'BR',
+                visibleMetrics: true
+            });
+            spyOn(ctrl, '$onInit').and.callThrough();
+
+            storage.set(`${ctrl.city}_${ctrl.country}`, {"humidity":77,"pressure":1019,"temperature":17,"lastUpdate":"03:22:01 PM","nextUpdate":1584940725000});
+            ctrl.$onInit();
+            expect(ctrl.$onInit).toHaveBeenCalled();
+        });
+
+       
 
     });
 })();

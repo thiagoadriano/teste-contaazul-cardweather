@@ -9,7 +9,7 @@
             object = {
                 Uid: '0101'
             },
-            url = 'https://my.api.mockaroo.com/list-mock-contaazul.json?key=0f652150';
+            url = 'http://api.openweathermap.org/data/2.5/find?q=ubirici,br&units=metric&appid=acfcabc0159b253aa081c9fe3bbc8af2';
 
         beforeEach(module('weathernow'));
 
@@ -18,8 +18,6 @@
             HttpService = _HttpService_;
 
             spyOn(HttpService, 'get').and.callThrough();
-            spyOn(HttpService, 'post').and.callThrough();
-            spyOn(HttpService, 'put').and.callThrough();
         }));
 
         it('Deve garantir o service foi instanciado', () => {
@@ -31,14 +29,19 @@
             expect(HttpService.get).toHaveBeenCalled();
         });
 
-        it('Deve garantir que o método post foi chamado', () => {
-            HttpService.post(url, object);
-            expect(HttpService.post).toHaveBeenCalled();
-        });
-
-        it('Deve garantir que o método put foi chamado', () => {
-            HttpService.put(url, object);
-            expect(HttpService.put).toHaveBeenCalled();
+        it('Deve garantir chamada com retorno sucesso', () => {
+            var mockResponse = {
+                data: { success: true, message: "Success!" }
+            };
+    
+            $httpBackend.expectGET(url)
+                .respond(mockResponse);
+    
+            HttpService.get(url).then((data) => {
+                expect(data).toEqual(mockResponse);
+            });
+    
+            $httpBackend.flush();
         });
 
     });

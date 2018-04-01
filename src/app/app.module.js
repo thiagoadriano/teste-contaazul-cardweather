@@ -5,6 +5,7 @@
         .module('weathernow', [
             'ngAnimate',
             'ngSanitize',
-            'ui.router'
+            'ui.router',
+            'angularMoment'
         ]);
 }());

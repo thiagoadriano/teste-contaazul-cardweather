@@ -15,20 +15,12 @@ module.exports = (config) => {
         ],
 
         // list of files / patterns to load in the browser
-        files: [
-            './node_modules/angular/angular.js',
-            './node_modules/angular-animate/angular-animate.js',
-            './node_modules/angular-cookies/angular-cookies.js',
+        files: (require('../vendors_js.json')).concat([
             './node_modules/angular-mocks/angular-mocks.js',
-            './node_modules/angular-aria/angular-aria.js',
-            './node_modules/angular-sanitize/angular-sanitize.js',
-            './node_modules/angular-touch/angular-touch.js',
-            './node_modules/@uirouter/core/_bundles/ui-router-core.js',
-            './node_modules/@uirouter/angularjs/release/ui-router-angularjs.js',
             './src/app/app.module.js',
             './src/app/app.module.spec.js',
             './src/**/*.js'
-        ],
+        ]),
 
         // list of files / patterns to exclude
         exclude: [

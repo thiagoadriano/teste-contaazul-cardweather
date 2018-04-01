@@ -18,7 +18,7 @@
     }
 
     /* @ngInject */
-    function _controller(WeatherService, $timeout, Util, TIME_REFRESH, StorageService) {
+    function _controller(WeatherService, Util, StorageService, moment) {
         var vm = this,
             cityQuery = null,
             timer = null;
@@ -37,10 +37,22 @@
 
         function _checkMetricsInit() {
             var metrics = StorageService.get(vm.city + '_' + vm.country),
-                now = Date.now();
+                update = null,
+                now = null;
 
-            if (metrics && metrics.nextUpdate >= now) {
+            if (!metrics) {
+                _getData();
+                return;
+            }
+            
+            update = moment(metrics.nextUpdate);
+            now = moment();
+
+            if (update.isSameOrAfter(now)) {
+                var timerNext = Util.getNextRefresh(update, now);
                 vm.metrics = metrics;
+                Util.timerRefresh(timer, _getData, timerNext);
+
             } else {
                 _getData();
             }
@@ -66,24 +78,17 @@
                 return _error();
             }
 
-            var date = new Date();
+            var date = moment();
             vm.metrics = Util.mapMetrics(data.list[0]);
             vm.metrics.lastUpdate = Util.timeNow(date);
             vm.metrics.nextUpdate = Util.nextUpdate(date);
             StorageService.set(vm.city + '_' + vm.country, vm.metrics);
             vm.showLoad = false;
-            _timerRefresh();
-        }
-
-        function _timerRefresh() {
-            if (timer) {
-                $timeout.cancel(timer);
-            }
-            timer = $timeout(_getData, TIME_REFRESH);
+            Util.timerRefresh(timer, _getData);
         }
 
         function onInit() {
-            vm.city = Util.captalize(vm.city);
+            vm.city = Util.Converter.textCaptalize(vm.city);
             vm.country = vm.country.toUpperCase();
             cityQuery = vm.city + ',' + vm.country;
             _checkMetricsInit();
